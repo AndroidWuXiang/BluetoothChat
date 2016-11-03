@@ -15,7 +15,21 @@
     android:orientation="vertical"
     android:weightSum="1">
 
-    <ToggleButton
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ToggleButton
+            android:id="@+id/tb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/bt_search"
+            android:text="搜索蓝牙"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+   <!-- <ToggleButton
         android:id="@+id/tb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -23,10 +37,19 @@
         android:id="@+id/bt_search"
         android:text="搜索蓝牙"
         android:layout_width="100dp"
+        android:layout_height="wrap_content" />-->
+    <EditText
+        android:id="@+id/send_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送"/>
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="@android:color/background_dark"/>
     <ListView
         android:id="@+id/lv_bt"

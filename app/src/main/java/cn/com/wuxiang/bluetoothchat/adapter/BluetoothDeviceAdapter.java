@@ -2,6 +2,7 @@ package cn.com.wuxiang.bluetoothchat.adapter;
 
 import android.content.Context;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +34,7 @@ public class BluetoothDeviceAdapter extends BaseAdapter{
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return mList.get(position);
     }
 
     @Override
@@ -43,6 +44,15 @@ public class BluetoothDeviceAdapter extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+       /* if("已配对"==(mList.get(position).get("state").toString())){
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.layout_head_device_paired,null);
+            return convertView;
+        }
+        else if("未配对"==(mList.get(position).get("state").toString())){
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.layout_head_device_not_paired,null);
+            return convertView;
+        }*/
+
         ViewHolder viewHolder = null;
         if(convertView == null){
             viewHolder = new ViewHolder();
